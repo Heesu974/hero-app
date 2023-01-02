@@ -1,0 +1,10 @@
+<div *ngIf="messageService.messages.length">
+    <h2>Messages</h2>
+    <button type="button" class="clear" (click)="messageService.clear()">Clear Messages</button>
+    <div *ngFor="let message of messageService.messages">{{message}}</div>
+</div>
+
+<!-- 
+    이 messageService의 목적은
+    사용자가 hero를 클릭할 때마다 그 이력을 보여주기 위함이다. 
+-->
