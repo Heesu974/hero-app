@@ -3,22 +3,28 @@ import { FormControlDirective } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {HeroDetailComponent }from './hero-detail/hero-detail.component';
 
 
-const routes: Routes = [{
-  path: 'heroes',
-  component:HeroesComponent,
-},
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-  },
-
+const routes: Routes = [
   {
     path: '',
     redirectTo:'/dashboard',
     pathMatch: 'full',
-  }
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
+  {
+    path: 'detail/:id',
+    component: HeroDetailComponent
+  },
+  {
+  path: 'heroes',
+  component:HeroesComponent,
+},
+
 ];
 //application이 시작할 때, 브라우저의 부소 바는 사이트의 root를 바라보는데, 현재 존재하는  root 중에서는 그 어떤것도 navigate를 만들지 않는다. 이 공간은 router-outletㅇ이 비어있는 것이다. 
 //application을 자동으로 dashboard에 연결하기 위해서 아래의 root를 추가한다.
