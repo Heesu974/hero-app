@@ -23,3 +23,6 @@ export class HeroDetailComponent {
 //HeroService는 MessageService를 메세지를 보낼 때 사용할 것입니다.
 //2. MessageComponent에 inject합니다.
 //MessageComponent가 해당 메세지를 출력할 수 있고, 또한 유저가 클릭한 hero 아이디를 보여줄 수 있도록 하기 위함
+
+//HeroDetailComponent는 selected hero의 디테일을 보연준다.
+//이 순간은  HeroDetailComponent가 HeroesComponent의 아래에 오직 나타나는 순간에.
