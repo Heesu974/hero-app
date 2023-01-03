@@ -23,15 +23,19 @@ export class HeroDetailComponent {
     ) {
 
   }
+  ngOnInit():void {
+    this.getHero()
+  }
 
+  getHero():void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.heroService.getHero(id).subscribe(hero => this.hero = hero);
+  }
+
+  goback():void {
+    this.location.back();
+  }
+//여기서 location은 class 입니다.
   
-
-  //ActivatedRoute holds information about route
-
-  //activatedroute는 route information을 가지고 있는데, 이 route information은 herodetailcomponent의 instance에 관한 information이다.
-
-  //HeroService는 hero data를 remote server로 부터 가져오고, 이 component가 이걸 herotodisplay를 위해 사용합니다.
-
-  //location은 angular service이고, 브라우저와 상호작용합니다. 이 서비스가 이전 페이지로 갈 수 있도록 도와줍니다.
 }
 
