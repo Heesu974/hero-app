@@ -19,7 +19,7 @@ export class HeroService {
     private http: HttpClient,
     private messageService: MessageService,
     ) {}
-
+//HeroService의 생성자에서 HttpClient를 http 프로퍼티로 inject
  
   // getHeroes(): Observable<Hero[]> {
   //   const ObservableHeroes = of(HEROES);
@@ -51,7 +51,7 @@ export class HeroService {
     this.messageService.add(`HeroService: fetched hero id=${id}`);
     return of(hero);
   }
-  //이게 뭔지 ....?
+
 
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
