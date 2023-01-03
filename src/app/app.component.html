@@ -1,3 +1,14 @@
 <h1>{{ title }}</h1>
-<app-heroes></app-heroes>
+<!-- <app-heroes></app-heroes> -->
+<router-outlet></router-outlet>
 <app-messages></app-messages>
+
+<!-- 1. app-routing module에서 route와 component 연결을 설정한 후 
+2. app-heroes를 router-outlet으로 바꿨는데, 
+    이는 app-routing module에서 heroes에 대한 component를 HeroesComponent라고 설정했기 때문에 더이상 appcomponent에서는 app-heroes 라는 component가 필요하지 않다. 대신 그 자리에는 url 요청이 있을 때만 해당하는 component를 불러오도록 ㅎ나다. -->
+    
+    <!-- ***여기에서 router-outlet이나, app-messages는 directives 라고 한다. -->
+
+    <!-- router-outlet은 router가 routed된 view를 어디에 그릴 것인지 말해준다. -->
+
+

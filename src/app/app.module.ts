@@ -15,3 +15,8 @@ import { MessagesComponent } from './messages/messages.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+//appModule이 RouterModule을 export하는  ApproutingModule을 import하기 때문에. 
+//routerOutlet이라는 router directives를 AppComponent에서 사용할 수 있는 것이다.
+
+
