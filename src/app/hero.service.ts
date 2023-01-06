@@ -47,7 +47,7 @@ getHero(id: number): Observable<Hero> {
       catchError(this.handleError<any>('updateHero'))
     );
   }
-
+ //바로 httpClient를 사용해서 데이터를 처리해봅시다.
   
 
   private log(message: string) {
