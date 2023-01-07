@@ -35,7 +35,12 @@ export class HeroDetailComponent {
   goback():void {
     this.location.back();
   }
-//여기서 location은 class 입니다.
+  save(): void {
+    if(this.hero) {
+      this.heroService.updateHero(this.hero).subscribe(() => this.goback());
+    }
+  }
+  
   
 }
 

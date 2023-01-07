@@ -15,9 +15,10 @@ import {HttpClientModule}from '@angular/common/http';
 //2. 데이터 서버 목킹하기 - in-memory web api 로드
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, DashboardComponent],
+  declarations: [AppComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, DashboardComponent, HeroSearchComponent],
   imports: [
     BrowserModule, 
     AppRoutingModule, 
